@@ -1,0 +1,213 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Nams Couture</title>
+    <meta name="description" content="Get in touch with Nams Couture. Contact us for styling consultations, custom designs, or any questions.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="header-spacer"></div>
+                <a href="index.html" class="brand">Nams Couture</a>
+                
+                <nav class="nav-desktop">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="gallery.html" class="nav-link">Gallery</a>
+                    <a href="contact.html" class="nav-link active">Contact</a>
+                    <a href="login.html" class="nav-link">Login</a>
+                    <button class="theme-toggle" id="themeToggle">
+                        <span class="theme-icon">🌙</span>
+                    </button>
+                </nav>
+
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+
+            <nav class="nav-mobile" id="mobileNav">
+                <a href="index.html" class="nav-link-mobile">Home</a>
+                <a href="about.html" class="nav-link-mobile">About</a>
+                <a href="gallery.html" class="nav-link-mobile">Gallery</a>
+                <a href="contact.html" class="nav-link-mobile">Contact</a>
+                <a href="login.html" class="nav-link-mobile">Login</a>
+                <button class="theme-toggle-mobile" id="themeToggleMobile">
+                    <span class="theme-icon">🌙</span> Toggle Theme
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container" style="padding: 3rem 1rem;">
+            <!-- Header -->
+            <section style="text-align: left; margin-bottom: 4rem;">
+                <h1 style="font-family: var(--font-serif); font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 700; margin-bottom: 1.5rem;">
+                    Get in Touch
+                </h1>
+                <p style="font-size: 1.25rem; color: var(--muted-foreground); max-width: 48rem;">
+                    We'd love to hear from you. Whether you have questions about our 
+                    collection, need styling advice, or want to schedule a consultation, 
+                    we're here to help.
+                </p>
+            </section>
+
+            <!-- Contact Info Cards -->
+            <section style="display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-bottom: 4rem;">
+                <div class="card" style="text-align: center; padding: 1.5rem;">
+                    <div style="width: 3rem; height: 3rem; background: var(--gradient-accent); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.5rem;">
+                        ✉️
+                    </div>
+                    <h3 style="font-weight: 700; margin-bottom: 0.5rem;">Email</h3>
+                    <p style="color: var(--primary); font-weight: 500; margin-bottom: 0.25rem;">info@namscouture.com</p>
+                    <p style="font-size: 0.875rem; color: var(--muted-foreground);">Send us an email anytime</p>
+                </div>
+
+                <div class="card" style="text-align: center; padding: 1.5rem;">
+                    <div style="width: 3rem; height: 3rem; background: var(--gradient-accent); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.5rem;">
+                        📞
+                    </div>
+                    <h3 style="font-weight: 700; margin-bottom: 0.5rem;">Phone</h3>
+                    <p style="color: var(--primary); font-weight: 500; margin-bottom: 0.25rem;">+977 987654321</p>
+                    <p style="font-size: 0.875rem; color: var(--muted-foreground);">Call us during business hours</p>
+                </div>
+
+                <div class="card" style="text-align: center; padding: 1.5rem;">
+                    <div style="width: 3rem; height: 3rem; background: var(--gradient-accent); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.5rem;">
+                        📍
+                    </div>
+                    <h3 style="font-weight: 700; margin-bottom: 0.5rem;">Address</h3>
+                    <p style="color: var(--primary); font-weight: 500; margin-bottom: 0.25rem;">Durbar marg</p>
+                    <p style="font-size: 0.875rem; color: var(--muted-foreground);">Visit our flagship store</p>
+                </div>
+
+                <div class="card" style="text-align: center; padding: 1.5rem;">
+                    <div style="width: 3rem; height: 3rem; background: var(--gradient-accent); border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.5rem;">
+                        🕒
+                    </div>
+                    <h3 style="font-weight: 700; margin-bottom: 0.5rem;">Hours</h3>
+                    <p style="color: var(--primary); font-weight: 500; margin-bottom: 0.25rem;">Sat-Fri: 10AM-8PM</p>
+                    <p style="font-size: 0.875rem; color: var(--muted-foreground);">Saturday: 12PM-6PM</p>
+                </div>
+            </section>
+
+            <!-- Contact Form and Store Info -->
+            <section style="display: grid; grid-template-columns: 1fr; gap: 3rem;">
+                <!-- Contact Form -->
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title" style="font-family: var(--font-serif); text-align: left;">Send us a Message</h2>
+                    </div>
+                    <div class="card-content">
+                        <form id="contactForm">
+                            <div style="display: grid; grid-template-columns: 1fr; gap: 1rem; margin-bottom: 1.5rem;">
+                                <div class="form-group">
+                                    <label for="name" class="form-label">Name *</label>
+                                    <input
+                                        type="text"
+                                        id="name"
+                                        name="name"
+                                        class="form-input"
+                                        placeholder="Your full name"
+                                        required
+                                    />
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone" class="form-label">Phone</label>
+                                    <input
+                                        type="tel"
+                                        id="phone"
+                                        name="phone"
+                                        class="form-input"
+                                        placeholder="Your phone number"
+                                    />
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email *</label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    class="form-input"
+                                    placeholder="your@email.com"
+                                    required
+                                />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject" class="form-label">Subject</label>
+                                <input
+                                    type="text"
+                                    id="subject"
+                                    name="subject"
+                                    class="form-input"
+                                    placeholder="What would you like to discuss?"
+                                />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message" class="form-label">Message *</label>
+                                <textarea
+                                    id="message"
+                                    name="message"
+                                    class="form-textarea"
+                                    placeholder="Tell us how we can help you..."
+                                    required
+                                ></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-luxury" style="width: 100%; margin-top: 1rem;">
+                                Send Message
+                                <span class="btn-icon">→</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3 class="footer-title">Nams Couture</h3>
+                    <p class="footer-description">
+                        Luxury fashion for the modern individual. Crafted with precision and elegance.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Quick Links</h4>
+                    <div class="footer-links">
+                        <a href="index.html" class="footer-link">Home</a>
+                        <a href="about.html" class="footer-link">About</a>
+                        <a href="gallery.html" class="footer-link">Gallery</a>
+                        <a href="contact.html" class="footer-link">Contact</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Connect</h4>
+                    <div class="footer-contact">
+                        <p>Email: info@namscouture.com</p>
+                        <p>Phone: +977 9742468926</p>
+                        <p>Follow us for latest updates</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Nams Couture. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

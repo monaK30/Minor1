@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Nams Couture</title>
+    <meta name="description" content="Sign in to your Nams Couture account or create a new account to access exclusive collections and benefits.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="header-spacer"></div>
+                <a href="index.html" class="brand">Nams Couture</a>
+                
+                <nav class="nav-desktop">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="gallery.html" class="nav-link">Gallery</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                    <a href="login.html" class="nav-link active">Login</a>
+                    <button class="theme-toggle" id="themeToggle">
+                        <span class="theme-icon">🌙</span>
+                    </button>
+                </nav>
+
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+
+            <nav class="nav-mobile" id="mobileNav">
+                <a href="index.html" class="nav-link-mobile">Home</a>
+                <a href="about.html" class="nav-link-mobile">About</a>
+                <a href="gallery.html" class="nav-link-mobile">Gallery</a>
+                <a href="contact.html" class="nav-link-mobile">Contact</a>
+                <a href="login.html" class="nav-link-mobile">Login</a>
+                <button class="theme-toggle-mobile" id="themeToggleMobile">
+                    <span class="theme-icon">🌙</span> Toggle Theme
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main style="min-height: 100vh; padding: 3rem 0; display: flex; align-items: center; justify-content: center;">
+        <div class="container" style="max-width: 28rem;">
+            <div class="card">
+                <div class="card-header" style="text-align: center;">
+                    <h1 id="formTitle" class="card-title" style="font-family: var(--font-serif); font-size: 2rem; font-weight: 700;">
+                        Welcome Back
+                    </h1>
+                    <p id="formSubtitle" style="color: var(--muted-foreground);">
+                        Sign in to your Nams Couture account
+                    </p>
+                </div>
+                
+                <div class="card-content">
+                    <form id="loginForm">
+                        <!-- Username Field -->
+                        <div class="form-group">
+                            <label for="username" class="form-label">Username</label>
+                            <div style="position: relative;">
+                                <span style="position: absolute; left: 0.75rem; top: 50%; transform: translateY(-50%); color: var(--muted-foreground);">👤</span>
+                                <input
+                                    type="text"
+                                    id="username"
+                                    name="username"
+                                    class="form-input"
+                                    style="padding-left: 2.5rem;"
+                                    placeholder="Enter your username"
+                                    required
+                                />
+                            </div>
+                        </div>
+
+                        <!-- Email Field (Sign Up Only) -->
+                        <div id="emailGroup" class="form-group" style="display: none;">
+                            <label for="email" class="form-label">Email</label>
+                            <div style="position: relative;">
+                                <span style="position: absolute; left: 0.75rem; top: 50%; transform: translateY(-50%); color: var(--muted-foreground);">✉️</span>
+                                <input
+                                    type="email"
+                                    id="emailInput"
+                                    name="email"
+                                    class="form-input"
+                                    style="padding-left: 2.5rem;"
+                                    placeholder="Enter your email"
+                                />
+                            </div>
+                        </div>
+
+                        <!-- Password Field -->
+                        <div class="form-group">
+                            <label for="password" class="form-label">Password</label>
+                            <div style="position: relative;">
+                                <span style="position: absolute; left: 0.75rem; top: 50%; transform: translateY(-50%); color: var(--muted-foreground);">🔒</span>
+                                <input
+                                    type="password"
+                                    id="password"
+                                    name="password"
+                                    class="form-input"
+                                    style="padding-left: 2.5rem; padding-right: 2.5rem;"
+                                    placeholder="Enter your password"
+                                    required
+                                />
+                                <button
+                                    type="button"
+                                    class="password-toggle"
+                                    style="position: absolute; right: 0.75rem; top: 50%; transform: translateY(-50%); background: none; border: none; color: var(--muted-foreground); cursor: pointer; font-size: 1rem;"
+                                >
+                                    
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Confirm Password Field (Sign Up Only) -->
+                        <div id="confirmPasswordGroup" class="form-group" style="display: none;">
+                            <label for="confirmPassword" class="form-label">Confirm Password</label>
+                            <div style="position: relative;">
+                                <span style="position: absolute; left: 0.75rem; top: 50%; transform: translateY(-50%); color: var(--muted-foreground);">🔒</span>
+                                <input
+                                    type="password"
+                                    id="confirmPassword"
+                                    name="confirmPassword"
+                                    class="form-input"
+                                    style="padding-left: 2.5rem;"
+                                    placeholder="Confirm your password"
+                                />
+                            </div>
+                        </div>
+
+                        <!-- Forgot Password Link (Login Only) -->
+                        <div id="forgotPassword" style="text-align: right; margin-bottom: 1.5rem;">
+                            <button
+                                type="button"
+                                style="background: none; border: none; color: var(--primary); font-size: 0.875rem; cursor: pointer; text-decoration: underline;"
+                            >
+                                Forgot password?
+                            </button>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button id="submitBtn" type="submit" class="btn btn-luxury" style="width: 100%; margin-bottom: 1.5rem;">
+                            Sign In
+                        </button>
+                    </form>
+
+                    <!-- Separator -->
+                    <div style="border-top: 1px solid var(--border); margin: 1.5rem 0;"></div>
+
+                    <!-- Toggle Mode -->
+                    <div style="text-align: center; margin-bottom: 1.5rem;">
+                        <p style="color: var(--muted-foreground);">
+                            <span id="toggleText">Don't have an account?</span>
+                            <button
+                                type="button"
+                                id="toggleMode"
+                                style="background: none; border: none; color: var(--primary); font-weight: 500; cursor: pointer; text-decoration: underline; margin-left: 0.25rem;"
+                            >
+                                Sign up
+                            </button>
+                        </p>
+                    </div>
+
+                    <!-- Back to Home -->
+                    <div style="text-align: center; padding-top: 1.5rem;">
+                        <a 
+                            href="index.html" 
+                            style="font-size: 0.875rem; color: var(--muted-foreground); text-decoration: none;"
+                        >
+                            ← Back to Home
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Info -->
+            <div style="margin-top: 2rem; text-align: center;">
+                <div class="card" style="background: var(--gradient-elegant);">
+                    <div class="card-content">
+                        <h3 style="font-weight: 600; margin-bottom: 0.5rem;">Member Benefits</h3>
+                        <ul style="font-size: 0.875rem; color: var(--muted-foreground); text-align: left; line-height: 1.6;">
+                            <li>• Exclusive access to new collections</li>
+                            <li>• Personal styling recommendations</li>
+                            <li>• Priority customer support</li>
+                            <li>• Special member pricing and offers</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3 class="footer-title">Nams Couture</h3>
+                    <p class="footer-description">
+                        Luxury fashion for the modern individual. Crafted with precision and elegance.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Quick Links</h4>
+                    <div class="footer-links">
+                        <a href="index.html" class="footer-link">Home</a>
+                        <a href="about.html" class="footer-link">About</a>
+                        <a href="gallery.html" class="footer-link">Gallery</a>
+                        <a href="contact.html" class="footer-link">Contact</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Connect</h4>
+                    <div class="footer-contact">
+                        <p>Email: info@namscouture.com</p>
+                        <p>Phone: +1 (555) 123-4567</p>
+                        <p>Follow us for latest updates</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Nams Couture. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

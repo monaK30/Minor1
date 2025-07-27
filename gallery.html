@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Nams Couture</title>
+    <meta name="description" content="Explore Nams Couture's luxury fashion collection. Browse dresses, blazers, accessories and more.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="header-spacer"></div>
+                <a href="index.html" class="brand">Nams Couture</a>
+                
+                <nav class="nav-desktop">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="gallery.html" class="nav-link active">Gallery</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                    <a href="login.html" class="nav-link">Login</a>
+                    <button class="theme-toggle" id="themeToggle">
+                        <span class="theme-icon">🌙</span>
+                    </button>
+                </nav>
+
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+
+            <nav class="nav-mobile" id="mobileNav">
+                <a href="index.html" class="nav-link-mobile">Home</a>
+                <a href="about.html" class="nav-link-mobile">About</a>
+                <a href="gallery.html" class="nav-link-mobile">Gallery</a>
+                <a href="contact.html" class="nav-link-mobile">Contact</a>
+                <a href="login.html" class="nav-link-mobile">Login</a>
+                <button class="theme-toggle-mobile" id="themeToggleMobile">
+                    <span class="theme-icon">🌙</span> Toggle Theme
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container" style="padding: 3rem 1rem;">
+            <!-- Header -->
+            <section style="text-align: left; margin-bottom: 3rem;">
+                <h1 style="font-family: var(--font-serif); font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 700; margin-bottom: 1.5rem;">
+                    Fashion Gallery
+                </h1>
+                <p style="font-size: 1.25rem; color: var(--muted-foreground); max-width: 48rem;">
+                    Explore our curated collection of luxury fashion pieces, each designed 
+                    with attention to detail and crafted for the modern individual.
+                </p>
+            </section>
+
+            <!-- Gallery Grid -->
+            <section class="gallery-grid">
+                <!-- Item 1 -->
+                <div class="gallery-item" data-category="dresses">
+                    <div class="gallery-image-container">
+                        <img src="src/assets/evening-dress.jpg" alt="Elegant Evening Dress" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <button class="btn btn-hero">View Details</button>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <div class="gallery-item-title">
+                            <h3>Elegant Evening Dress</h3>
+                            <span class="gallery-price">Rs.15,765</span>
+                        </div>
+                        <p class="gallery-description">
+                            Sophisticated evening wear perfect for special occasions
+                        </p>
+                        <div class="gallery-actions">
+                            <button class="btn btn-luxury" style="flex: 1; font-size: 0.875rem;">Add to Cart</button>
+                            <button class="btn btn-outline">♡</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="gallery-item" data-category="blazers">
+                    <div class="gallery-image-container">
+                        <img src="src/assets/classic-blazer.jpg" alt="Classic Blazer" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <button class="btn btn-hero">View Details</button>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <div class="gallery-item-title">
+                            <h3>Classic Blazer</h3>
+                            <span class="gallery-price">Rs.5,000</span>
+                        </div>
+                        <p class="gallery-description">
+                            Timeless blazer for professional and casual looks
+                        </p>
+                        <div class="gallery-actions">
+                            <button class="btn btn-luxury" style="flex: 1; font-size: 0.875rem;">Add to Cart</button>
+                            <button class="btn btn-outline">♡</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="gallery-item" data-category="accessories">
+                    <div class="gallery-image-container">
+                        <img src="src/assets/handbag.png" alt="Luxury Handbag" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <button class="btn btn-hero">View Details</button>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <div class="gallery-item-title">
+                            <h3>Luxury Handbag</h3>
+                            <span class="gallery-price">Rs.25,000</span>
+                        </div>
+                        <p class="gallery-description">
+                            Handcrafted leather bag with premium finishing
+                        </p>
+                        <div class="gallery-actions">
+                            <button class="btn btn-luxury" style="flex: 1; font-size: 0.875rem;">Add to Cart</button>
+                            <button class="btn btn-outline">♡</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="gallery-item" data-category="casual">
+                    <div class="gallery-image-container">
+                        <img src="src/assets/casual.jpg" alt="Casual Chic Outfit" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <button class="btn btn-hero">View Details</button>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <div class="gallery-item-title">
+                            <h3>Casual Chic Outfit</h3>
+                            <span class="gallery-price">Rs.5,000</span>
+                        </div>
+                        <p class="gallery-description">
+                            Comfortable yet stylish everyday wear
+                        </p>
+                        <div class="gallery-actions">
+                            <button class="btn btn-luxury" style="flex: 1; font-size: 0.875rem;">Add to Cart</button>
+                            <button class="btn btn-outline">♡</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="gallery-item" data-category="accessories">
+                    <div class="gallery-image-container">
+                        <img src="src/assets/scarf.jpg" alt="Designer Scarf" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <button class="btn btn-hero">View Details</button>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <div class="gallery-item-title">
+                            <h3>Designer Scarf</h3>
+                            <span class="gallery-price">Rs.1200</span>
+                        </div>
+                        <p class="gallery-description">
+                            Silk scarf with exclusive pattern design
+                        </p>
+                        <div class="gallery-actions">
+                            <button class="btn btn-luxury" style="flex: 1; font-size: 0.875rem;">Add to Cart</button>
+                            <button class="btn btn-outline">♡</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 7 -->
+                <div class="gallery-item" data-category="dresses">
+                    <div class="gallery-image-container">
+                        <img src="src/assets/cocktail.jpg" alt="Cocktail Dress" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <button class="btn btn-hero">View Details</button>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <div class="gallery-item-title">
+                            <h3>Cocktail Dress</h3>
+                            <span class="gallery-price">Rs.8600</span>
+                        </div>
+                        <p class="gallery-description">
+                            Perfect for cocktail parties and social events
+                        </p>
+                        <div class="gallery-actions">
+                            <button class="btn btn-luxury" style="flex: 1; font-size: 0.875rem;">Add to Cart</button>
+                            <button class="btn btn-outline">♡</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 9 -->
+                <div class="gallery-item" data-category="casual">
+                    <div class="gallery-image-container">
+                        <img src="src/assets/weekend.jpg" alt="Weekend Casual" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <button class="btn btn-hero">View Details</button>
+                        </div>
+                    </div>
+                    <div class="gallery-info">
+                        <div class="gallery-item-title">
+                            <h3>Weekend Casual</h3>
+                            <span class="gallery-price">Rs.6500</span>
+                        </div>
+                        <p class="gallery-description">
+                            Relaxed fit for weekend activities
+                        </p>
+                        <div class="gallery-actions">
+                            <button class="btn btn-luxury" style="flex: 1; font-size: 0.875rem;">Add to Cart</button>
+                            <button class="btn btn-outline">♡</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Call to Action -->
+            <section class="card" style="text-align: center; margin-top: 5rem; background: var(--gradient-elegant); padding: 3rem; border-radius: 0.75rem;">
+                <h2 style="font-family: var(--font-serif); font-size: 2rem; font-weight: 700; margin-bottom: 1.5rem;">
+                    Can't Find What You're Looking For?
+                </h2>
+                <p style="font-size: 1.125rem; color: var(--muted-foreground); margin-bottom: 2rem; max-width: 32rem; margin-left: auto; margin-right: auto;">
+                    Our personal styling team can help you find the perfect pieces 
+                    or create custom designs tailored to your unique style.
+                </p>
+                <div style="display: flex; flex-direction: column; gap: 1rem; justify-content: center;">
+                    <button class="btn btn-luxury" style="margin: 0 auto;">Personal Styling Service</button>
+                    <button class="btn btn-outline" style="margin: 0 auto;">Custom Design Consultation</button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3 class="footer-title">Nams Couture</h3>
+                    <p class="footer-description">
+                        Luxury fashion for the modern individual. Crafted with precision and elegance.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Quick Links</h4>
+                    <div class="footer-links">
+                        <a href="index.html" class="footer-link">Home</a>
+                        <a href="about.html" class="footer-link">About</a>
+                        <a href="gallery.html" class="footer-link">Gallery</a>
+                        <a href="contact.html" class="footer-link">Contact</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Connect</h4>
+                    <div class="footer-contact">
+                        <p>Email: info@namscouture.com</p>
+                        <p>Phone: +977 9786445389</p>
+                        <p>Follow us for latest updates</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Nams Couture. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
